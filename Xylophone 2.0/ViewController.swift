@@ -11,14 +11,33 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    //MARK: - OUTLETS
+    @IBOutlet weak var cButton: UIButton!
+    @IBOutlet weak var dButton: UIButton!
+    @IBOutlet weak var eButton: UIButton!
+    @IBOutlet weak var fButton: UIButton!
+    @IBOutlet weak var gButton: UIButton!
+    @IBOutlet weak var aButton: UIButton!
+    @IBOutlet weak var bButton: UIButton!
+    @IBOutlet weak var c2Button: UIButton!
+    
+    
+    //MARK: - Audio properties
+    
     var audioPlayer:AVAudioPlayer?
     let sounds = ["c", "d1", "e1", "f", "g", "a", "b", "c2"]
 
+    //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        
+        cButton.layer.cornerRadius = 40
+        dButton.layer.cornerRadius = 40
+        eButton.layer.cornerRadius = 40
+        fButton.layer.cornerRadius = 40
+        gButton.layer.cornerRadius = 40
+        aButton.layer.cornerRadius = 40
+        bButton.layer.cornerRadius = 40
+        c2Button.layer.cornerRadius = 40
     }
  
     @IBAction func bars(_ sender: UIButton) {
@@ -28,7 +47,6 @@ class ViewController: UIViewController {
         
         // Get the file name and pass it into the method
         playSounds(filename: sounds[tag])
-        
         
     }
     
@@ -54,3 +72,4 @@ class ViewController: UIViewController {
     
 }
 }
+
